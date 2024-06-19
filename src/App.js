@@ -15,6 +15,7 @@ function App() {
 
   const handleSelectChange = (event) => {
     setOption(event.target.value);
+    
   };
 
   return (
