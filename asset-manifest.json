@@ -1,10 +1,13 @@
 {
   "files": {
-    "main.js": "/Chakra-UI/static/js/main.35954b8c.js",
+    "main.css": "/Chakra-UI/static/css/main.dc4d6ff2.css",
+    "main.js": "/Chakra-UI/static/js/main.60d55aa7.js",
     "index.html": "/Chakra-UI/index.html",
-    "main.35954b8c.js.map": "/Chakra-UI/static/js/main.35954b8c.js.map"
+    "main.dc4d6ff2.css.map": "/Chakra-UI/static/css/main.dc4d6ff2.css.map",
+    "main.60d55aa7.js.map": "/Chakra-UI/static/js/main.60d55aa7.js.map"
   },
   "entrypoints": [
-    "static/js/main.35954b8c.js"
+    "static/css/main.dc4d6ff2.css",
+    "static/js/main.60d55aa7.js"
   ]
 }
