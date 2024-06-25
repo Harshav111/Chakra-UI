@@ -23,10 +23,10 @@ function App() {
 
   return (
     <div className='App'>
-      <p>CLICK BELOW !!!!</p>
+      <p>CLICK BELOW</p>
       
-      <Drop />
-      <Button
+      {/* <Drop /> */}
+     {/*  <Button
         onMouseEnter={() => setIsShown(true)}
         onMouseLeave={() => setIsShown(false)}
         onClick={() => setIsShown(!isShown)}
@@ -34,7 +34,7 @@ function App() {
         variant="solid"
       >
         Organization {option === 1 ? 'Default' : option}
-      </Button>
+      </Button> */}
       {isShown && (
         <div
           onMouseEnter={() => setIsShown(true)}
@@ -43,7 +43,7 @@ function App() {
           <ThemeProvider theme={theme}>
             <CSSReset />
             <Container centerContent p={5}>
-              <Box
+             {/*  <Box
                 borderWidth={1}
                 borderRadius="lg"
                 overflow="hidden"
@@ -57,7 +57,7 @@ function App() {
                   Avivo AI - Demo
                 </Heading>
                 <CustomSelect option={option} handleSelectChange={handleSelectChange} />
-              </Box>
+              </Box> */}
             </Container>
           </ThemeProvider>
           
