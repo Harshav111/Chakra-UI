@@ -1,16 +1,23 @@
-// DynamicAIInsertion.js
-
 import React, { useState } from 'react';
 
 const DynamicAIInsertion = () => {
     const [insertedContent, setInsertedContent] = useState([]);
+    const [showMessage, setShowMessage] = useState(false);
+
 
     const handleDocumentClick = (event) => {
         const { clientX, clientY } = event;
         const newContent = { x: clientX, y: clientY };
 
         // Add new content to the existing array
-        setInsertedContent([...insertedContent, newContent]);
+        const newInsertedContent = [...insertedContent, newContent];
+        setInsertedContent(newInsertedContent);
+
+        // Check if zIndex exceeds 100
+        if (newInsertedContent.length > 100) {
+            setShowMessage(true);
+        }
+        
     };
 
     return (
@@ -33,6 +40,25 @@ const DynamicAIInsertion = () => {
                     Welcome to Avivo AI {index + 1}!
                 </div>
             ))}
+
+            {/* Conditionally render the warning message */}
+            {showMessage && (
+                <div
+                    style={{
+                        position:'fixed',
+                        top: '50%',
+                        left: '50%',
+                        transform: 'translate(-50%, -50%)',
+                        backgroundColor: 'red',
+                        color: 'white',
+                        padding: '20px',
+                        borderRadius: '10px',
+                        zIndex: '1000',
+                    }}
+                >
+                    Warning: Clicks  exceeded {insertedContent.length}
+                </div>
+            )}
         </div>
     );
 };

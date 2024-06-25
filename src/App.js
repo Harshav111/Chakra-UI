@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className='App'>
-      <button >AI</button>
+      <p>CLICK BELOW !!!!</p>
       
       <Drop />
       <Button
